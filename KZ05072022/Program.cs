@@ -1,23 +1,23 @@
 ﻿// Из имеющегося массива строк сформировать массив из строк, длина которых меньше либо равна 3 символам.
 Console.Clear();
-void PrintArray(string[] array) ///метод печати массива
+void PrintArray(string[] array) 
 {
     int len = array.Length;
     for (int i = 0; i < len; i++) Console.Write($"{array[i]} ");
     Console.WriteLine();
 }
 
-int CountArrayLess(string[] countarray) /// метод подсчета количества элементов с длиной меньше 4
+int CountArrayLess(string[] countarray) 
 {
     int count = 0;
     foreach (string element in countarray) if (element.Length < 4) count++;
     return count;
 }
 
-string[] ArrayNew(string[] arraynew) /// метод, формирующий новый массив с длиной элементов меньше 4
+string[] ArrayNew(string[] arraynew) 
 {
-    int len = CountArrayLess(arraynew);  //длина нового массива равна количеству 
-    string[] newArray = new string[len];              //элементов исходного массива с длиной меньше 4
+    int len = CountArrayLess(arraynew);  
+    string[] newArray = new string[len];              
     if (len == 0) return newArray;
     else
     {
